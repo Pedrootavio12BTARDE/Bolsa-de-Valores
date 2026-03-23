@@ -1,0 +1,348 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F8F8F8;
+    color: #333;
+}
+
+/* HEADER E LOGOS */
+header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logos-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.logo-texto {
+    font-weight: 800;
+    color: #2C3E50; /* Azul Marinho */
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2C3E50; /* Azul Marinho */
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2ECC71;
+}
+
+ 
+/* =========================================
+   HERO SECTION (Texto à esquerda e mais centralizado)
+   ========================================= */
+.hero-section {
+    background-image: url('./Projeto-bolsa/grafico-fundo.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* MUDA AQUI: Joga o bloco inteiro para a ESQUERDA */
+    position: relative; 
+    padding-top: 80px;
+    padding-left: 10%; /* MUDA AQUI: Dá um respiro na esquerda para não colar na tela */
+    
+}
+
+/* Cortina de esmaecimento da imagem (Degradê Parte 1 - Mantido igual pois está bom!) */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom, rgba(232, 248, 245, 0) 0%, #E8F8F5 100%);
+    pointer-events: none;
+}
+
+.hero-content {
+    /* Tiramos o margin-bottom gigante que jogava pro teto e colocamos um margin-top leve pra descer um pouco */
+    margin-top: 10vh; 
+    max-width: 600px;
+    text-align: left; /* MUDA AQUI: Alinha as letras e o botão à esquerda */
+    position: relative; /* Ativa a sobreposição */
+    z-index: 2; /* Traz o texto e o botão para a frente da "névoa" do degradê */
+    margin-top: 10vh; 
+    max-width: 600px;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #2C3E50;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.9); 
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #2C3E50;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.9); 
+}
+
+.btn-primary {
+    background-color: #2ECC71;
+    color: #2C3E50;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    border: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #27AE60;
+}
+
+/* =========================================
+   CALCULADORAS (Degradê Parte 2)
+   ========================================= */
+.cards-section {
+    padding: 80px 50px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    /* Ciano claro para Verde água */
+    background: linear-gradient(to bottom, #E8F8F5 0%, #D5F5E3 100%);
+}
+
+.cards-section h2 {
+    color: #2C3E50;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.card h3 {
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   CONCEITOS / TRILHA (Degradê Parte 3)
+   ========================================= */
+.conteudo-section {
+    padding: 80px 50px;
+    /* Verde água para o fundo cinza claro original */
+    background: linear-gradient(to bottom, #D5F5E3 0%, #F8F8F8 100%);
+}
+
+.conteudo-section h2 {
+    color: #2C3E50;
+    text-align: center;
+    font-size: 32px;
+}
+
+.subtitulo-secao {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.grid-conteudo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card-conteudo {
+    background-color: #F8F8F8;
+    border-left: 5px solid #2ECC71;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card-conteudo h3 {
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card-conteudo p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.card-conteudo ul, .card-conteudo ol {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.card-conteudo li {
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   FÓRMULA E INPUTS
+   ========================================= */
+.formula-box {
+    margin-top: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 18px;
+    background-color: #F4F6F8;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.resultado-destaque {
+    color: #2ECC71;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.input-formula, .input-mini {
+    font-family: 'Fira Code', monospace;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: right; /* Alinha números e cursor à direita */
+    padding-right: 8px;
+}
+
+.input-formula { width: 70px; }
+.input-mini { width: 50px; }
+
+/* Oculta as setinhas dos inputs de número */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    --moz-appearance: textfield;
+}
+
+/* =========================================
+   TABELA DE PROFISSÕES
+   ========================================= */
+.card-tabela {
+    background-color: #F8F8F8;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card-tabela h3 {
+    color: #2C3E50;
+    margin-bottom: 5px;
+}
+
+.card-tabela p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.tabela-profissoes {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+}
+
+.tabela-profissoes th, .tabela-profissoes td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.tabela-profissoes th {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.tabela-profissoes tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    padding: 40px 50px;
+}
+
+.referencias h3 {
+    margin-bottom: 15px;
+    color: #2ECC71;
+}
+
+.referencias ul {
+    list-style-type: square;
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+.disclaimer {
+    margin-top: 30px;
+    border-top: 1px solid #455A64;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #A0A0A0;
+}

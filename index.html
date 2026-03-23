@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática na Bolsa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logos-container">
+            <img src="./Projeto-bolsa/logo_unasp.png" alt="Logo Unasp" class="logo">
+<img src="./Projeto-bolsa/logo-marcosmatico.png" alt="Logo MarcosMatico" class="logo">
+
+            <img src="./Projeto-bolsa/logo-bahia.png" alt="Logo EC Bahia" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#calculadoras">Ferramentas</a></li>
+                <li><a href="#conceitos">Conceitos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>A Matemática que Move a Bolsa</h1>
+            <p>Descubra como os números explicam o mercado financeiro de forma simples e interativa.</p>
+            <a href="#calculadoras" class="btn-primary">Explorar Ferramentas</a>
+        </div>
+    </section>
+
+    <section id="calculadoras" class="cards-section">
+        <h2>Nossas Ferramentas Interativas</h2>
+        
+        <div class="cards-container">
+            
+            <div class="card">
+                <h3>Juros Compostos</h3>
+                <p>Descubra como o tempo multiplica seu capital.</p>
+                <div class="formula-box">
+                    <span class="resultado-destaque" id="resultado-m">R$ 0,00</span> = 
+                    <input type="number" id="capital" step="any" placeholder="C" class="input-formula" title="Digite o Capital"> &times; 
+                    ( 1 + <input type="number" id="taxa" step="any" placeholder="i" class="input-formula" title="Digite a Taxa"> ) ^ 
+                    <input type="number" id="tempo" step="any" placeholder="t" class="input-formula" title="Digite o Tempo">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Preço Médio</h3>
+                <p>Calcule o custo médio das suas ações.</p>
+                <div class="formula-box">
+                    <span class="resultado-destaque" id="resultado-pm">R$ 0,00</span> = 
+                    ( ( <input type="number" id="q1" step="any" placeholder="Q1" class="input-mini"> &times; <input type="number" id="p1" step="any" placeholder="P1" class="input-mini"> ) + 
+                      ( <input type="number" id="q2" step="any" placeholder="Q2" class="input-mini"> &times; <input type="number" id="p2" step="any" placeholder="P2" class="input-mini"> ) ) / Total
+                </div>
+            </div>
+
+        </div> 
+    </section>
+
+    <section id="conceitos" class="conteudo-section">
+        <h2>A Trilha do Investidor</h2>
+        <p class="subtitulo-secao">Entenda o mercado financeiro direto ao ponto, sem economês.</p>
+
+        <div class="grid-conteudo">
+            
+            <div class="card-conteudo">
+                <h3>🌾 Commodities na B3</h3>
+                <p>São matérias-primas brutas negociadas em escala global.</p>
+                <ul>
+                    <li><strong>Principais:</strong> Petróleo (Petrobras), Minério de Ferro (Vale), Soja e Milho.</li>
+                    <li><strong>Vantagens:</strong> Proteção contra inflação e alta demanda mundial.</li>
+                </ul>
+            </div>
+
+            <div class="card-conteudo">
+                <h3>💵 Moedas (Câmbio)</h3>
+                <p>Você pode investir em moedas estrangeiras direto da B3.</p>
+                <ul>
+                    <li><strong>Principais:</strong> Dólar (minidólar/WDO) e Euro.</li>
+                    <li><strong>Vantagens:</strong> "Hedge" (proteção). Se a economia do Brasil vai mal, o Dólar costuma subir.</li>
+                </ul>
+            </div>
+
+            <div class="card-conteudo">
+                <h3>👤 Qual é o seu Perfil?</h3>
+                <p>Antes de investir, você precisa se conhecer:</p>
+                <ul>
+                    <li><strong>Conservador:</strong> Foca em segurança (Renda Fixa/Tesouro).</li>
+                    <li><strong>Moderado:</strong> Aceita um pouco de risco para ganhar mais.</li>
+                    <li><strong>Arrojado:</strong> Tem estômago para a montanha-russa da bolsa.</li>
+                </ul>
+            </div>
+
+            <div class="card-conteudo">
+                <h3>📈 Bolsa em Alta vs. Baixa</h3>
+                <p>O Ibovespa é o termômetro do Brasil.</p>
+                <ul>
+                    <li><strong>Em Alta:</strong> Otimismo. Empresas lucrando, juros caindo, gringos investindo aqui.</li>
+                    <li><strong>Em Baixa:</strong> Pessimismo. Crises, inflação alta e medo.</li>
+                </ul>
+            </div>
+
+            <div class="card-conteudo">
+                <h3>🇧🇷 A B3 no nosso dia a dia</h3>
+                <p>Mesmo que você não invista, a bolsa mexe com você:</p>
+                <ul>
+                    <li>O preço da gasolina depende das ações da Petrobras e do Dólar.</li>
+                    <li>A inflação no supermercado sofre impacto direto das commodities agrícolas.</li>
+                    <li>Milhões de CPFs já investem com apenas R$ 10,00 pelo celular.</li>
+                </ul>
+            </div>
+
+            <div class="card-conteudo">
+                <h3>⚙️ Como o dinheiro gira?</h3>
+                <p>A bolsa não é um cassino, é um mecanismo de crescimento:</p>
+                <ol>
+                    <li>A empresa precisa de dinheiro para crescer e lança ações na bolsa.</li>
+                    <li>Investidores compram essas ações.</li>
+                    <li>A empresa constrói fábricas e gera lucro.</li>
+                    <li>O lucro é dividido com os investidores (Dividendos).</li>
+                </ol>
+            </div>
+
+            <div class="card-conteudo">
+                <h3>🌍 Conexão Global</h3>
+                <p>Nenhuma bolsa opera sozinha hoje em dia.</p>
+                <ul>
+                    <li>Se a bolsa dos EUA ou da China espirra, o Brasil pega resfriado.</li>
+                    <li>Dependemos do capital estrangeiro para a B3 subir.</li>
+                </ul>
+            </div>
+
+            <div class="card-conteudo">
+                <h3>⚠️ Riscos e como "driblá-los"</h3>
+                <p>Onde há lucro, há risco. Mas dá para gerenciar:</p>
+                <ul>
+                    <li><strong>Risco de Mercado:</strong> A ação cair. <em>Drible:</em> Focar no longo prazo.</li>
+                    <li><strong>Risco de Liquidez:</strong> Não ter para quem vender. <em>Drible:</em> Comprar grandes empresas.</li>
+                    <li><strong>Regra de Ouro:</strong> Nunca coloque todos os ovos na mesma cesta (Diversificação!).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card-tabela">
+            <h3>💼 Profissões do Mercado Financeiro</h3>
+            <p>Quem faz a engrenagem girar nos bastidores?</p>
+            <table class="tabela-profissoes">
+                <thead>
+                    <tr>
+                        <th>Profissão</th>
+                        <th>O que faz?</th>
+                        <th>Média Salarial (BR)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Assessor / Corretor</strong></td>
+                        <td>Capta clientes e ajuda a montar a carteira de investimentos.</td>
+                        <td>R$ 3.000 a R$ 15.000+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Analista (CNPI)</strong></td>
+                        <td>Estuda a matemática das empresas e recomenda compras/vendas.</td>
+                        <td>R$ 7.000 a R$ 20.000+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Economista Chefe</strong></td>
+                        <td>Avalia o cenário macro para guiar o banco ou fundo.</td>
+                        <td>R$ 10.000 a R$ 30.000+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="referencias">
+            <h3>Referências Bibliográficas</h3>
+            <ul>
+                <li>GRAHAM, Benjamin. <em>O Investidor Inteligente</em>. HarperCollins, 2003.</li>
+                <li>ASSAF NETO, Alexandre. <em>Mercado Financeiro</em>. Atlas, 2012.</li>
+                <li>B3 - Brasil, Bolsa, Balcão. Disponível em: b3.com.br. Acesso em: 2024.</li>
+            </ul>
+        </div>
+        <div class="disclaimer">
+            <p>Projeto acadêmico. Este site tem caráter educacional e não constitui recomendação de investimento.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            // CALCULADORA 1: JUROS COMPOSTOS
+            const inputCapital = document.getElementById('capital');
+            const inputTaxa = document.getElementById('taxa');
+            const inputTempo = document.getElementById('tempo');
+            const resultadoM = document.getElementById('resultado-m');
+
+            function calcularJuros() {
+                // Se a caixinha estiver vazia, o JavaScript entende como ZERO (0)
+                let c = parseFloat(inputCapital.value) || 0;
+                let i = parseFloat(inputTaxa.value) || 0;
+                let t = parseFloat(inputTempo.value) || 0;
+
+                // Faz a conta
+                let m = c * Math.pow((1 + i), t);
+                
+                // Mostra o resultado na tela
+                resultadoM.innerText = "R$ " + m.toFixed(2).replace('.', ',');
+            }
+
+            // Ouve sempre que você digitar ou apagar algo
+            inputCapital.addEventListener('input', calcularJuros);
+            inputTaxa.addEventListener('input', calcularJuros);
+            inputTempo.addEventListener('input', calcularJuros);
+
+            // CALCULADORA 2: PREÇO MÉDIO
+            const inputQ1 = document.getElementById('q1');
+            const inputP1 = document.getElementById('p1');
+            const inputQ2 = document.getElementById('q2');
+            const inputP2 = document.getElementById('p2');
+            const resultadoPM = document.getElementById('resultado-pm');
+
+            function calcularPrecoMedio() {
+                let q1 = parseFloat(inputQ1.value) || 0;
+                let p1 = parseFloat(inputP1.value) || 0;
+                let q2 = parseFloat(inputQ2.value) || 0;
+                let p2 = parseFloat(inputP2.value) || 0;
+
+                let totalQuantidade = q1 + q2;
+                
+                if (totalQuantidade > 0) {
+                    let pm = ((q1 * p1) + (q2 * p2)) / totalQuantidade;
+                    resultadoPM.innerText = "R$ " + pm.toFixed(2).replace('.', ',');
+                } else {
+                    // Se não tiver quantidade nenhuma, zera o visor
+                    resultadoPM.innerText = "R$ 0,00";
+                }
+            }
+
+            inputQ1.addEventListener('input', calcularPrecoMedio);
+            inputP1.addEventListener('input', calcularPrecoMedio);
+            inputQ2.addEventListener('input', calcularPrecoMedio);
+            inputP2.addEventListener('input', calcularPrecoMedio);
+
+        });
+    </script>
+</body>
+</html>
