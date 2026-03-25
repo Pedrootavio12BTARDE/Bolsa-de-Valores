@@ -322,35 +322,43 @@ input[type="number"] {
    FOOTER
    ========================================= */
 footer {
-    background-color: #2C3E50;
-    color: #FFFFFF;
-    padding: 40px 50px;
+    background-color: #2C3E50; /* Azul marinho escuro para contraste */
+    color: white;
+    padding: 50px 10% 20px 10%;
+    margin-top: 0;
 }
 
-.referencias h3 {
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Separa o grupo das referências */
+    flex-wrap: wrap; /* Ajusta no celular */
+    gap: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
+}
+
+.grupo-info h3, .referencias h3 {
+    color: #2ECC71; /* Verde neon para os títulos */
     margin-bottom: 15px;
-    color: #2ECC71;
+    font-size: 1.2rem;
 }
 
-.referencias ul {
-    list-style-type: square;
-    margin-left: 20px;
-    line-height: 1.6;
+.lista-integrantes {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-integrantes li {
+    margin-bottom: 8px;
+    font-weight: 500;
 }
 
 .disclaimer {
-    margin-top: 30px;
-    border-top: 1px solid #455A64;
-    padding-top: 15px;
     text-align: center;
-    font-size: 12px;
-    color: #A0A0A0;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    opacity: 0.7;
 }
-
-
-
-
-
 
 
 
@@ -390,16 +398,100 @@ footer {
 
 /* RESPONSIVIDADE (PARA TELAS MENORES OU CELULARES) */
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 32px; /* Diminui a letra em telas pequenas */
-    }
-    
-    .hero-section, .cards-section, .conteudo-section {
-        height: auto; /* Em celulares, a altura fixa pode cortar conteúdo, então deixamos livre */
-        padding: 60px 20px;
+    /* 1. Reset de largura para o corpo não vazar */
+    html, body {
+        overflow-x: hidden; 
+        width: 100%;
     }
 
+    /* 2. Header: Empilha as logos e o menu */
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        position: relative; /* Sai do absoluto para não cobrir o texto */
+        background-color: #F8F8F8; /* Fundo sólido no celular para ler melhor */
+    }
+
+    .logos-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .logo {
+        height: 35px; /* Logos menores no celular */
+    }
+
+    nav ul {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    /* 3. Hero Section: Texto centralizado e preenchendo a tela */
+    .hero-section {
+        min-height: 80vh;
+        padding: 40px 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-attachment: scroll; /* Parallax costuma travar em celular, melhor desativar */
+    }
+
+    .hero-content {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    /* 4. Seções: Tira a altura fixa de 100vh para o conteúdo não cortar */
+    .cards-section, .conteudo-section {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    /* 5. Cards: Largura total */
     .card {
-        width: 100%; /* Cards ocupam a largura toda no celular */
+        width: 100%; 
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* 6. Calculadoras: Ajusta a fonte das fórmulas para caber */
+    .formula-box {
+        font-size: 14px;
+        justify-content: center;
+    }
+
+    .input-formula, .input-mini {
+        width: 60px;
+    }
+
+    /* 7. Tabela: O GRANDE VILÃO DO CORTE 
+       Faz a tabela permitir scroll lateral se for muito larga */
+    .card-tabela {
+        padding: 15px;
+        width: 100%;
+        overflow-x: auto; /* Cria scroll só na tabela se precisar */
+    }
+
+    .tabela-profissoes {
+        font-size: 13px;
+        min-width: 500px; /* Garante que os dados não fiquem esmagados */
+    }
+
+    /* 8. Footer: Tudo centralizado */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .referencias ul {
+        list-style: none;
+        margin-left: 0;
     }
 }
